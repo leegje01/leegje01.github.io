@@ -1,1 +1,13 @@
-<html>
+   <head>
+      <style>
+      p#a1 {
+         color: red;
+      }
+      p#a2 {
+         color: green;
+      }
+	  p#a3 {
+         color: yellow;
+      }
+      </style>
+   </head>
