@@ -51,9 +51,11 @@
          footer {
              clear: both;
              background-color: yellow;
+			 position: relative;
          }
          body {
-             background-color: black;
+             background-color: rgb(74,164,16);
              margin: 0px;
+			 
          }
          
