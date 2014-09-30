@@ -37,21 +37,20 @@
          section {
              float: left;
              width: 50%;
-             height: 80%;
+             height: 500px;
              background-color: green;
              color: white;
          }
          aside {
              float: left;
              width: 50%;
-             height: 80&;
+             height: 500px;
              background-color: navy;
              color: orange;
          }
          footer {
              clear: both;
              background-color: yellow;
-			 height:20%;
          }
          body {
              background-color: black;
