@@ -62,6 +62,7 @@
         newli=className=priorityValue;
         newcb=document.createElement("input");
         newcb.type="checkbox";
+        newcb.onclick=doneTask;
         newli.appendChild(newcb);
         t=document.createTextNode(task.value);
         newli.appendChild(t);
