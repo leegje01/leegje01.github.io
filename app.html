@@ -84,7 +84,12 @@
     for(i=0;i<allEntries.length:i++){
     bl = document.querySelector("#busylist")
            li = document.createElement("li")
-           li.innerHTML = "<input type =checkbox>" + i.value}
+           li.innerHTML = "<input type =checkbox>" + i.value
+           cb=document.createElement("input")
+           cb.type = "checkbox"
+           t= document.createTextNode(i.value)
+           bl.appendChild(li)
+           }
            
     
    
