@@ -53,20 +53,21 @@
     res[]
     var i;
     allEntries = document.querySelectorAll("li")
-    for(i=0; i <allEntries.length; i++) {
-    if (allEntries[i].className 1="done"){
+    for(i=0; i < allEntries.length; i++) {
+    if (allEntries[i].className !="done"){
     res.push(allEntries[i].innertext );
     }
     console.log(res)
     //so we store the array in local storage
     localStorage.setItem("todoDatabase",JSON.stringify(res))
+    }
     </script>
     <script>
    doneTask=function()
    		if (this.checked) {
    			this.parentNode.classList.add("done");
    			} else {
-        this.parentNode.classList.removec=("done");
+        this.parentNode.classList.remove=("done");
    }
     addTask= function() {
         
