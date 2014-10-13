@@ -45,8 +45,7 @@
      }
        
            
-     </script>
-	 <script>
+     
 	 addHw=function()
        {
            h=document.querySelector("#addhomework");
@@ -55,8 +54,8 @@
            li3.innerHTML="<input type =checkbox>" + h.value
            ah.appendChild(li3)
        }
-	 </script>
-    <script type="text/javascript">
+	
+    
         addLow= function()
        {
            l=document.querySelector("#lowTask");
@@ -65,8 +64,8 @@
            li2.innerHTML="<input type =checkbox>" + l.value
            nh.appendChild(li2)
        }
-       
-    localsave=function(){
+      
+    localSave=function(){
     res[]
     var i;
     allEntries = document.querySelectorAll("li")
@@ -76,10 +75,21 @@
     }
     console.log(res)
     //so we store the array in local storage
+    
     localStorage.setItem("todoDatabase",JSON.stringify(res))
     }
-    </script>
-    <script>
+    
+    restoreList=function(){
+    allEntries=JSON.parse(localStorage.getItem("todoDatabase"));
+    for(i=0;i<allEntries.length:i++){
+    bl = document.querySelector("#busylist")
+           li = document.createElement("li")
+           li.innerHTML = "<input type =checkbox>" + i.value}
+           
+    
+   
+    
+    
    doneTask=function()
    		if (this.checked) {
    			this.parentNode.classList.add("done");
