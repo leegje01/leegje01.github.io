@@ -10,6 +10,13 @@
            <input type="text" id="taskBox" placeholder= "Enter Text" onchange="addTask()" />
            <button id="a" onclick="addTask();">Add Task</button>
        </section>
+	   
+	    <aside id =middle>
+          
+           <ol type=I id= "homework"></ol>
+           <input type="text" id="addhomework" placeholder= "Enter Text" onchange="addTask()" />
+           <button id="c" onclick="addHw();">Add Task</button>
+       </aside>
       
        <aside id =low>
           <input type="text" id="lowTask" placeholder= "Enter Text" onchange="addLow()" />
@@ -39,6 +46,16 @@
        
            
      </script>
+	 <script>
+	 addHw=function()
+       {
+           h=document.querySelector("#addhomework");
+           ah=document.querySelector("#homework")
+           li3=document.createElement("li")
+           li3.innerHTML="<input type =checkbox>" + h.value
+           ah.appendChild(li3)
+       }
+	 </script>
     <script type="text/javascript">
         addLow= function()
        {
