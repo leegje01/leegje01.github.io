@@ -68,12 +68,13 @@
     for(i=0; i < allEntries.length; i++) {
     if (allEntries[i].className !="done"){
     res.push(allEntries[i].innertext );
-    }
+    }}
     console.log(res)
     //so we store the array in local storage
     </script>
 	<script>
-    localStorage.setItem("todoDatabase",JSON.stringify(res))
+    {
+	localStorage.setItem("todoDatabase",JSON.stringify(res))
     }
     
     restoreList=function(){
@@ -82,7 +83,7 @@
 		   bl = document.querySelector("#busylist")
            li = document.createElement("li")
            li.innertext = "<input type =checkbox>" + allEntries[i]}
-           
+           bl.appendchild(li)
            }
            
    </script> 
