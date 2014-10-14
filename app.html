@@ -72,7 +72,11 @@
     restoreList=function(){
     allEntries=JSON.parse(localStorage.getItem("todoDatabase"));
     for(i=0;i<allEntries.length:i++){
-   
+    bl = document.querySelector("#busylist")
+           li = document.createElement("li")
+           li.innerHTML = "<input type =checkbox>" + allEntries[i]}
+           
+           }
            
     
     
@@ -83,7 +87,7 @@
         this.parentNode.classList.remove=("done");
    }
     addTask= function() {
-        
+        var new(li)
         task=document.querySelector("#taskBox");
         taskList= document.querySelector("#busylist");
         priorityValue= document.querySelector("#priority").value;
