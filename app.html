@@ -53,13 +53,13 @@
        {
            l=document.querySelector("#lowTask");
            nh=document.querySelector("#nohurry")
-           li2=document.createElement("li")
+           li=document.createElement("li")
            newcb=document.creatElement("input")
 		   newcb.type="checkbox"
-		   t2= document.createTextNode(l.value)
+		   t= document.createTextNode(l.value)
            nh.appendChild(li2)
-		   li2.appendChild(newcb);
-           li2.appendChild(t2) 
+		   li.appendChild(newcb);
+           li.appendChild(t) 
            l.value="";
            newcb.onclick=doneTask;
        }
