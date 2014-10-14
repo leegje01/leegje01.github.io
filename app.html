@@ -37,8 +37,7 @@
            t= document.createTextNode(i.value)
            bl.appendChild(li)
 		   li.appendChild(newcb);
-           li.appendChild(t)
-		   
+           li.appendChild(t) 
            i.value="";
            newcb.onclick=doneTask;
 		   
@@ -62,13 +61,15 @@
     </script>
     <script>
     localSave=function(){
-    res=[]
+    var res=[]
     var i;
     allEntries = document.querySelectorAll("li")
     for(i=0; i < allEntries.length; i++) {
-    if (allEntries[i].className !="done"){
-    res.push(allEntries[i].innertext );
-    }}
+    if (! allEntries[i].classList.contains=("done") ){
+    res.push(allEntries[i].inneText );
+    }
+	
+	}
 	
     console.log(res)
 	localStorage.setItem("todoDatabase",JSON.stringify(res))
@@ -80,9 +81,10 @@
 	
     
     
-    restoreList=function(){
-    allEntries=JSON.parse(localStorage.getItem("todoDatabase"));
-    for(i=0;i<allEntries.length;i++)
+    restoreTasks=function(){
+    allTasks=JSON.parse(localStorage.getItem("todoDatabase"))
+	taskList=document.querySelector("#busylist");
+    for(i=0;i<allTasks.length;i++)
 			{
 		   bl = document.querySelector("#busylist")
            li = document.createElement("li")
@@ -91,12 +93,15 @@
            
    </script> 
    <script> 
-   doneTask=function(){ alert("hello")
+   doneTask=function(){
    		if (this.checked) {
    			this.parentNode.classList.add("done");
    			} else {
         this.parentNode.classList.remove("done");
-   }
+		}
+		
+		localSave()
+   
    }
    </script>
    <script>
