@@ -26,7 +26,7 @@
      
     
 
-     <script type="text/javascript">
+     <script>
        addTask = function() 
                {
            i = document.querySelector('#taskBox');
@@ -65,7 +65,8 @@
     }
     console.log(res)
     //so we store the array in local storage
-    
+    </script>
+	<script>
     localStorage.setItem("todoDatabase",JSON.stringify(res))
     }
     
