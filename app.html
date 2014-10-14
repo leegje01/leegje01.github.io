@@ -67,7 +67,7 @@
     allEntries = document.querySelectorAll("li")
     for(i=0; i < allEntries.length; i++) {
     if (allEntries[i].className !="done"){
-    res.push(allEntries[i].innertext );
+    res.push(allEntries[i].innerHTML );
     }
     console.log(res)
     //so we store the array in local storage
