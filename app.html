@@ -71,7 +71,7 @@
     var i;
     allEntries = document.querySelectorAll("li")
     for(i=0; i < allEntries.length; i++) {
-    if (! allEntries[i].classList.contains=("done") ){
+    if (! allEntries[i].classList.contains("done") ){
     res.push(allEntries[i].innerText );
     }
 	
@@ -94,7 +94,7 @@
 			{
 		   bl = document.querySelector("#busylist")
            li = document.createElement("li")
-           li.innerHTML = allEntries[i].innerText
+           li.innerHTML = newcb + allEntries[i].innerText
 		   bl.appendChild(li)
 		   }
            }
