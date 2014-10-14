@@ -42,8 +42,8 @@
            
      
 	 
-	
-    
+	</script>
+    <script>
         addLow= function()
        {
            l=document.querySelector("#lowTask");
@@ -53,8 +53,8 @@
            nh.appendChild(li2)
        }
       
-   
-    
+    </script>
+    <script>
     localSave=function(){
     res[]
     var i;
@@ -72,27 +72,29 @@
     restoreList=function(){
     allEntries=JSON.parse(localStorage.getItem("todoDatabase"));
     for(i=0;i<allEntries.length:i++){
-    bl = document.querySelector("#busylist")
+		   bl = document.querySelector("#busylist")
            li = document.createElement("li")
            li.innerHTML = "<input type =checkbox>" + allEntries[i]}
            
            }
            
-    
-    
+   </script> 
+   <script> 
    doneTask=function()
    		if (this.checked) {
    			this.parentNode.classList.add("done");
    			} else {
         this.parentNode.classList.remove=("done");
    }
+   </script>
+   <script>
     addTask= function() {
-        var new(li)
+       
         task=document.querySelector("#taskBox");
         taskList= document.querySelector("#busylist");
         priorityValue= document.querySelector("#priority").value;
         newli=document.createElement("li");
-        newli=className=priorityValue;
+        newli=className=priorityvalue;
         newcb=document.createElement("input");
         newcb.type="checkbox";
         newcb.onclick=doneTask;
