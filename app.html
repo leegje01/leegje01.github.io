@@ -33,8 +33,6 @@
            bl = document.querySelector("#busylist")
            li = document.createElement("li")
            li.innerHTML = "<input type =checkbox>" + i.value
-           cb=document.createElement("input")
-           cb.type = "checkbox"
            t= document.createTextNode(i.value)
            bl.appendChild(li)
            t=document.createTextNode(task.value);
@@ -94,6 +92,7 @@
    			} else {
         this.parentNode.classList.remove=("done");
    }
+   //I think I am missing the connection to this.
    </script>
    <script>
    
