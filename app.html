@@ -11,12 +11,7 @@
            <button id="a" onclick="addTask();">Add Task</button>
        </section>
 	   
-	    <aside id =middle>
-          
-           <ol type=I id= "homework"></ol>
-           <input type="text" id="addhomework" placeholder= "Enter Text" onchange="addTask()" />
-           <button id="c" onclick="addHw();">Add Task</button>
-       </aside>
+	   
       
        <aside id =low>
           <input type="text" id="lowTask" placeholder= "Enter Text" onchange="addLow()" />
@@ -46,14 +41,7 @@
        
            
      
-	 addHw=function()
-       {
-           h=document.querySelector("#addhomework");
-           ah=document.querySelector("#homework")
-           li3=document.createElement("li")
-           li3.innerHTML="<input type =checkbox>" + h.value
-           ah.appendChild(li3)
-       }
+	 
 	
     
         addLow= function()
@@ -67,7 +55,29 @@
       
    
     
-   
+    localSave=function(){
+    res[]
+    var i;
+    allEntries = document.querySelectorAll("li")
+    for(i=0; i < allEntries.length; i++) {
+    if (allEntries[i].className !="done"){
+    res.push(allEntries[i].innertext );
+    }
+    console.log(res)
+    //so we store the array in local storage
+    
+    localStorage.setItem("todoDatabase",JSON.stringify(res))
+    }
+    
+    restoreList=function(){
+    allEntries=JSON.parse(localStorage.getItem("todoDatabase"));
+    for(i=0;i<allEntries.length:i++){
+    bl = document.querySelector("#busylist")
+           li = document.createElement("li")
+           li.innerHTML = "<input type =checkbox>" + allEntries[i]
+           
+           }
+           
     
     
    doneTask=function()
@@ -92,7 +102,7 @@
         taskList.appendChild(newli);
         task.value="";
         newcb.onclick=doneTask;
-        localSave()
+        localSave();
     }
     
     </script>
