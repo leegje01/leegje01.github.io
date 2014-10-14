@@ -55,7 +55,13 @@
            nh=document.querySelector("#nohurry")
            li2=document.createElement("li")
            li2.innerHTML="<input type =checkbox>" + l.value
+		   t= document.createTextNode(l.value)
            nh.appendChild(li2)
+		   nh.appendChild(li2)
+		   li2.appendChild(newcb);
+           li2.appendChild(t) 
+           i.value="";
+           newcb.onclick=doneTask;
        }
       
     </script>
@@ -84,11 +90,12 @@
     restoreTasks=function(){
     allTasks=JSON.parse(localStorage.getItem("todoDatabase"))
 	taskList=document.querySelector("#busylist");
-    for(i=0;i<allTasks.length;i++)
+    for(i=0;i < allTasks.length; i++)
 			{
 		   bl = document.querySelector("#busylist")
            li = document.createElement("li")
-           li.innerHTML = newcb.checkbox(allEntries[i].innerText)
+           li.innerHTML = newcb.checkbox+ allEntries[i].innerText
+		   bl.appendChild(li)
 		   }
            }
            
