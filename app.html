@@ -35,7 +35,6 @@
            li.innerHTML = "<input type =checkbox>" + i.value
            t= document.createTextNode(i.value)
            bl.appendChild(li)
-           t=document.createTextNode(task.value);
            newli.appendChild(t);
            taskList.appendChild(newli);
            task.value="";
@@ -60,7 +59,7 @@
     </script>
     <script>
     localSave=function(){
-    res[]
+    res=[]
     var i;
     allEntries = document.querySelectorAll("li")
     for(i=0; i < allEntries.length; i++) {
@@ -77,7 +76,7 @@
     
     restoreList=function(){
     allEntries=JSON.parse(localStorage.getItem("todoDatabase"));
-    for(i=0;i<allEntries.length:i++);
+    for(i=0;i<allEntries.length;i++)
 			{
 		   bl = document.querySelector("#busylist")
            li = document.createElement("li")
