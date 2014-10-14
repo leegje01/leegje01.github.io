@@ -60,5 +60,6 @@
         }
         li.done{
            text-decoration: line-through;
+		   color: black;
         }
     
