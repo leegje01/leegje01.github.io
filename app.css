@@ -58,7 +58,7 @@
         }
        
         }
-        li#done{
+        li.done{
            text-decoration: line-through;
         }
     
