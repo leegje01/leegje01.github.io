@@ -32,13 +32,15 @@
            i = document.querySelector('#taskBox');
            bl = document.querySelector("#busylist")
            li = document.createElement("li")
-           li.innerHTML = "<input type =checkbox>" + i.value
+           newcb=document.createElement("input")
+		   newcb.type="checkbox"
            t= document.createTextNode(i.value)
            bl.appendChild(li)
-           newli.appendChild(t);
-           taskList.appendChild(newli);
+           li.appendChild(t)
+		   li.appendChild(newcb);
            task.value="";
            newcb.onclick=doneTask;
+		   
 		   
      }
        
@@ -66,13 +68,16 @@
     if (allEntries[i].className !="done"){
     res.push(allEntries[i].innertext );
     }}
+	
     console.log(res)
+	localStorage.setItem("todoDatabase",JSON.stringify(res))
+	}
     //so we store the array in local storage
     </script>
 	<script>
-    {
-	localStorage.setItem("todoDatabase",JSON.stringify(res))
-    }
+    
+	
+    
     
     restoreList=function(){
     allEntries=JSON.parse(localStorage.getItem("todoDatabase"));
