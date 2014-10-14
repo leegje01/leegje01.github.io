@@ -67,7 +67,7 @@
     allEntries = document.querySelectorAll("li")
     for(i=0; i < allEntries.length; i++) {
     if (allEntries[i].className !="done"){
-    res.push(allEntries[i].innerHTML );
+    res.push(allEntries[i].innertext );
     }
     console.log(res)
     //so we store the array in local storage
@@ -81,7 +81,7 @@
     for(i=0;i<allEntries.length:i++){
 		   bl = document.querySelector("#busylist")
            li = document.createElement("li")
-           li.innerHTML = "<input type =checkbox>" + allEntries[i]}
+           li.innertext = "<input type =checkbox>" + allEntries[i]}
            
            }
            
