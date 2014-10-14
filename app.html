@@ -36,9 +36,10 @@
 		   newcb.type="checkbox"
            t= document.createTextNode(i.value)
            bl.appendChild(li)
-           li.appendChild(t)
 		   li.appendChild(newcb);
-           task.value="";
+           li.appendChild(t)
+		   
+           i.value="";
            newcb.onclick=doneTask;
 		   
 		   
