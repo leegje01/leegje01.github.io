@@ -98,8 +98,8 @@
 		   li = document.createElement("li")
 		   newcb.type="checkbox"
            li.innerHTML = allTasks[i]
-		   bl.appendChild(li)
-		   li.appendChild(newcb);
+           li.appendChild(newcb);
+		   bl.appendChild(li) 
 		   newcb.onclick=doneTask;
            allTasks[i]="";
 		   
