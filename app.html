@@ -66,7 +66,7 @@
       
     </script>
     <script>
-    
+    localSave=function(){
     var res=[]
     var i;
     allEntries = document.querySelectorAll("li")
@@ -87,7 +87,7 @@
 	
     
     
-    restoreTasks=function(){
+    
     allTasks=JSON.parse(localStorage.getItem("todoDatabase"))
 	taskList=document.querySelector("#busylist");
     for(i=0;i < allTasks.length; i++)
