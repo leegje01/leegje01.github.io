@@ -99,10 +99,10 @@
            li = document.createElement("li")
            li.innerHTML = allTasks[i]
 		   bl.appendChild(li)
-		   
+		   newcb.onclick=doneTask;
 		   li.appendChild(newcb);
            allTasks[i]="";
-           newcb.onclick=doneTask;
+           
 		   
 		   
 		   }
