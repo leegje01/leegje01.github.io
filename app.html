@@ -96,11 +96,12 @@
 		   bl = document.querySelector("#busylist");
 		   newcb=document.createElement("input")
 		   newcb.type="checkbox"
+		   li.appendChild(newcb);
            li = document.createElement("li")
            li.innerHTML = allTasks[i]
 		   bl.appendChild(li)
 		   newcb.onclick=doneTask;
-		   li.appendChild(newcb);
+		   
            allTasks[i]="";
            
 		   
