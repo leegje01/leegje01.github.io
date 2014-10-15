@@ -96,10 +96,11 @@
 		   bl = document.querySelector("#busylist");
 		   newcb=document.createElement("input")
 		   li = document.createElement("li")
+		   li.appendChild(newcb);
+		   bl.appendChild(li)
 		   newcb.type="checkbox"
            li.innerHTML = allTasks[i]
-           li.appendChild(newcb);
-		   bl.appendChild(li) 
+            
 		   newcb.onclick=doneTask;
            allTasks[i]="";
 		   
@@ -125,6 +126,6 @@
         // When the page is loaded restore all tasks
         window.onload = restoreTasks;
     </script>
-    
+    //
    
  </html>
