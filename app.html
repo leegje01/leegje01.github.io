@@ -32,7 +32,8 @@
            i = document.querySelector('#taskBox');
            bl = document.querySelector("#busylist")
            li = document.createElement("li")
-           
+           newcb=document.createElement("input")
+		   newcb.type="checkbox"
            t= document.createTextNode(i.value)
            bl.appendChild(li)
 		   li.appendChild(newcb);
@@ -98,10 +99,7 @@
 		   newcb=document.createElement("input")
 		   newcb.type="checkbox"
            t= document.createTextNode(i.value)
-           bl.appendChild(li)
-		   li.appendChild(newcb);
-           li.appendChild(t) 
-           i.value="";
+           
            newcb.onclick=doneTask;
 		   
 		   
