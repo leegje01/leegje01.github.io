@@ -92,13 +92,13 @@
 	taskList=document.querySelector("#busylist");
     for(i=0;i < allTasks.length; i++)
 			{
+		   newcb=document.createElement("input")
+		   newcb.type="checkbox"
 		   bl = document.querySelector("#busylist")
            li = document.createElement("li")
            li.innerHTML = allTasks[i]
 		   bl.appendChild(li)
-		   newcb=document.createElement("input")
-		   newcb.type="checkbox"
-           
+		   
 		   li.appendChild(newcb);
            allTasks[i]="";
            newcb.onclick=doneTask;
