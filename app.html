@@ -19,7 +19,7 @@
            <ol type=I id= "nohurry"></ol>
        </aside>
        
-       
+       <button onclick="changer();">changer</button>
        
            
     </body>    
@@ -58,8 +58,8 @@
 		   newcb.type="checkbox"
 		   t= document.createTextNode(l.value)
            nh.appendChild(li2)
-		   li.appendChild(newcb);
-           li.appendChild(t) 
+		   li2.appendChild(newcb);
+           li2.appendChild(t) 
            l.value="";
            newcb.onclick=doneTask;
        }
